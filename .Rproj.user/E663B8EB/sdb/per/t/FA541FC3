@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"Map making v1\"\noutput: html_notebook\n---\n\n```{r libraries, echo=FALSE}\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(ggmap)\nlibrary(rgdal)\nlibrary(Cairo)\ndata_dir <- file.path(getwd(),\"Data\")\n\n```\n\nFirst we load the data\n```{r}\nphilly <- readOGR(dsn = \"/Users/nickmarks/Downloads/Philly3\"\n                  , layer = \"Philly3\")\n\nroads_pdx <- readOGR(dsn = file.path(data_dir,\"tl_2017_41051_roads\")\n                 , layer = \"tl_2017_41051_roads\")\nroads_pdx_tidy <- tidy(roads)\n\n```\n\nPlot the basic map of PDX\n```{r}\nplot(roads_pdx)\n```\n\n",
+    "created" : 1508864078989.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "411926210",
+    "id" : "FA541FC3",
+    "lastKnownWriteTime" : 1508865465,
+    "last_content_update" : 1508866792642,
+    "path" : "~/Desktop/R/Carto/map making v1.Rmd",
+    "project_path" : "map making v1.Rmd",
+    "properties" : {
+        "chunk_output_type" : "inline"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
